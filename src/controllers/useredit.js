@@ -85,6 +85,9 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
         libraryMenu.setTitle(user.Name);
         page.querySelector(".username").innerHTML = user.Name;
         $("#txtUserName", page).val(user.Name);
+
+        $("#txtMaxConns", page).val(user.Policy.MaxConns);
+
         $("#chkIsAdmin", page).checked(user.Policy.IsAdministrator);
         $("#chkDisabled", page).checked(user.Policy.IsDisabled);
         $("#chkIsHidden", page).checked(user.Policy.IsHidden);
@@ -118,6 +121,9 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
 
     function saveUser(user, page) {
         user.Name = $("#txtUserName", page).val();
+
+        user.Policy.MaxConns = parseInt($("#txtMaxConns", page).val() || "1");
+
         user.Policy.IsAdministrator = $("#chkIsAdmin", page).checked();
         user.Policy.IsHidden = $("#chkIsHidden", page).checked();
         user.Policy.IsDisabled = $("#chkDisabled", page).checked();

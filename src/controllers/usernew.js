@@ -58,6 +58,9 @@ define(["jQuery", "loading", "fnchecked", "emby-checkbox"], function ($, loading
         user.Name = $("#txtUsername", page).val();
         user.Password = $("#txtPassword", page).val();
         ApiClient.createUser(user).then(function (user) {
+            
+            user.Policy.MaxConns = 1;
+
             user.Policy.EnableAllFolders = $("#chkEnableAllFolders", page).checked();
             user.Policy.EnabledFolders = [];
 

@@ -38,5 +38,8 @@ module.exports = merge(common, {
             name: 'scripts/apploader.js',
             filesToConcat: ['./standalone.js', './scripts/apploader.js']
         })
-    ]
+    ],
+    devServer: {
+        writeToDisk: true
+    }
 });
