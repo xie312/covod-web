@@ -122,7 +122,7 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
     function saveUser(user, page) {
         user.Name = $("#txtUserName", page).val();
 
-        user.Policy.MaxConns = parseInt($("#txtMaxConns", page).val() || "1");
+        user.Policy.MaxConns = parseInt($("#txtMaxConns", page).val() || "5");
 
         user.Policy.IsAdministrator = $("#chkIsAdmin", page).checked();
         user.Policy.IsHidden = $("#chkIsHidden", page).checked();
