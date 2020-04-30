@@ -29,7 +29,7 @@
     "hls.js": "^0.13.1",
     "howler": "^2.1.3",
     "jellyfin-noto": "https://github.com/jellyfin/jellyfin-noto",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jstree": "^3.3.7",
     "libass-wasm": "https://github.com/jellyfin/JavascriptSubtitlesOctopus",
     "libjass": "^0.11.0",
